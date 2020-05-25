@@ -1,6 +1,6 @@
 Steps:
 1. create Kubernetes Cluster with 3 worker nodes.
-
+###
 root@ip-172-31-8-35:~# kubectl get nodes
 NAME               STATUS   ROLES    AGE   VERSION
 ip-172-31-10-206   Ready    <none>   90m   v1.18.2+k3s1
