@@ -24,6 +24,10 @@ xvdb    202:16   0   50G  0 disk
 ```
 
 3. Format and Mount the disks at /var/lib/longhorn on all worker nodes.
+```lsblk```
+```sudo mkfs -t xfs /dev/xvdb```
+```sudo mkdir /var/lib/longhorn```
+```sudo mount /dev/xvdb /var/lib/longhorn```
 ```
 root@ip-172-31-9-86:~# blkid
 /dev/xvda1: LABEL="cloudimg-rootfs" UUID="6156ec80-9446-4eb1-95e0-9ae6b7a46187" TYPE="ext4" PARTUUID="fe3a9f65-01"
@@ -32,7 +36,4 @@ root@ip-172-31-9-86:~# blkid
 /dev/xvdb: UUID="af8a7535-b9bf-4479-807d-82bdc6e926f7" TYPE="xfs"
 root@ip-172-31-9-86:~#
 ```
-# lsblk
-# sudo mkfs -t xfs /dev/xvdb
-# sudo mkdir /var/lib/longhorn
-# sudo mount /dev/xvdb /var/lib/longhorn
+
